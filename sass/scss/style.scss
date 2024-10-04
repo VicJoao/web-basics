@@ -1,0 +1,69 @@
+@import 'config';
+
+
+*{
+    margin: 0;//remove default margin
+    padding: 0;//remove default padding
+    box-sizing: border-box;//border-box for padding and border to be included in width
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $light-color;
+    line-height: 1.6;//line height for text to be spaced out nicely
+}
+
+img {
+    width: 100%;//make images responsive
+}
+
+.showcase {
+    @include set-bg-color($primary-color);
+    height: 500px;
+
+    nav{
+        display: flex; //flexbox for nav items to be in a row
+        align-items: center; //center items vertically
+        justify-content: space-between; //space between items
+
+        ul{
+            display: flex; //flexbox for ul items to be in a row 
+            list-style: none;//remove bullet points
+
+            li{
+                margin-left: 20px; //space between items
+            }
+        }
+        a{
+            color:  set-text-color($primary-color);
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+    }
+
+    a{
+        text-decoration: none;//remove underline
+    }
+
+    &-content{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;//center items horizontally
+        margin-top: 30px;
+
+        img {
+            width: 50%;
+        }
+
+        h1{
+            font-size: 50px;
+            line-height: 1.2;
+        }
+    }
+}
+
+@import 'utilities';
+@import 'buttons';
+@import'mobile';

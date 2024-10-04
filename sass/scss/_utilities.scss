@@ -1,0 +1,58 @@
+.container {
+    max-width: 1100px;//max width of container
+    margin: 0 auto;//center container 
+    overflow: auto;//clear floats 
+    padding: 0 30px;//padding for container
+}
+
+//margin and padding classes
+$spacelist: (1,2,3,4,5);
+
+@each $space in $spacelist {
+    .m-#{$space} {
+        margin: #{$space * 5}px;
+    }
+    .my-#{$space} {
+        margin-top: #{$space * 5}px;
+        margin-bottom: #{$space * 5}px;
+    }
+    .mx-#{$space} {
+        margin-left: #{$space * 5}px;
+        margin-right: #{$space * 5}px;
+    }
+    .mt-#{$space} {
+        margin-top: #{$space * 5}px;
+    }
+    .mb-#{$space} {
+        margin-bottom: #{$space * 5}px;
+    }
+    .ml-#{$space} {
+        margin-left: #{$space * 5}px;
+    }
+    .mr-#{$space} {
+        margin-right: #{$space * 5}px;
+    }
+    .p-#{$space} {
+        padding: #{$space * 5}px;
+    }
+    .py-#{$space} {
+        padding-top: #{$space * 5}px;
+        padding-bottom: #{$space * 5}px;
+    }
+    .px-#{$space} {
+        padding-left: #{$space * 5}px;
+        padding-right: #{$space * 5}px;
+    }
+    .pt-#{$space} {
+        padding-top: #{$space * 5}px;
+    }
+    .pb-#{$space} {
+        padding-bottom: #{$space * 5}px;
+    }
+    .pl-#{$space} {
+        padding-left: #{$space * 5}px;
+    }
+    .pr-#{$space} {
+        padding-right: #{$space * 5}px;
+    }
+}

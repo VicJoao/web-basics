@@ -1,0 +1,18 @@
+{
+    "liveSassCompile.settings.autoprefix": [
+
+
+
+    ],
+    "liveSassCompile.settings.forceBaseDirectory": "",
+    "liveSassCompile.settings.generateMap": false,
+    //rename the output file to input.css
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/css", //new absolut path
+        }
+    ],
+    
+}

@@ -1,0 +1,22 @@
+$light-color: #f4f4f4;
+$font-stack: 'Poppins', sans-serif;
+$primary-color: #bdcdee;
+$secondary-color: #ff8700;
+
+//set text color based on background color
+@function set-text-color($color) {
+    $c : #fff;
+    @if (lightness($color) > 70) {
+        $c: #333;
+    }
+    @else {
+        $c: #fff;
+    }
+    @return $c;
+}
+
+//set the background color
+@mixin set-bg-color($color) {
+    background-color: $color;
+    color: set-text-color($color);
+} 
